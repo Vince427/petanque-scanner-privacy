@@ -1,28 +1,78 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Politique de Confidentialité — Pétanque Scanner</title>
+<title>Privacy Policy / Politique de Confidentialité — Pétanque Scanner</title>
 <style>
   :root { color-scheme: light dark; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-         max-width: 760px; margin: 0 auto; padding: 24px 18px 64px; line-height: 1.6; color: #1a1a1a; }
+         max-width: 800px; margin: 0 auto; padding: 24px 18px 64px; line-height: 1.6; color: #1a1a1a; }
   @media (prefers-color-scheme: dark) { body { background: #121212; color: #e6e6e6; } a { color: #6db3f2; } }
-  h1 { font-size: 1.7rem; margin-bottom: .2em; }
-  h2 { font-size: 1.2rem; margin-top: 2em; border-bottom: 1px solid #8884; padding-bottom: .25em; }
+  .lang-nav { display: flex; gap: 12px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #8884; }
+  .lang-nav a { text-decoration: none; font-weight: 700; padding: 6px 12px; border-radius: 6px; border: 1px solid #8884; }
+  h1 { font-size: 1.65rem; margin-bottom: .2em; }
+  h2 { font-size: 1.2rem; margin-top: 1.8em; border-bottom: 1px solid #8884; padding-bottom: .25em; }
   table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .95rem; }
   th, td { border: 1px solid #8884; padding: 8px 10px; text-align: left; vertical-align: top; }
   th { background: #8881; }
   code { background: #8882; padding: 1px 5px; border-radius: 4px; font-size: .9em; }
   .meta { color: #888; font-size: .9rem; }
-  hr { border: none; border-top: 1px solid #8883; margin: 2em 0; }
+  hr { border: none; border-top: 2px solid #8884; margin: 3em 0; }
 </style>
 </head>
 <body>
 
-<h1>Politique de Confidentialité — Pétanque Scanner</h1>
-<p class="meta"><strong>Dernière mise à jour :</strong> 5 juin 2026<br>
+<div class="lang-nav">
+  <a href="#en">🇬🇧 English Version</a>
+  <a href="#fr">🇫🇷 Version Française</a>
+</div>
+
+<section id="en">
+<h1>🇬🇧 Privacy Policy — Pétanque Scanner</h1>
+<p class="meta"><strong>Last Updated:</strong> October 2026<br>
+<strong>Developer:</strong> Vince427<br>
+<strong>Application:</strong> Pétanque Scanner (<code>com.petanquescanner.app</code>)</p>
+
+<h2>1. Summary</h2>
+<p>Pétanque Scanner is a <strong>100% local, offline-first</strong> application. It operates <strong>without any user account</strong>,
+<strong>without requiring an internet connection</strong>, and <strong>never collects, transmits, or sells personal data</strong>
+to third parties. All your data stays strictly on your device.</p>
+
+<h2>2. Data Stored on the Device</h2>
+<table>
+<tr><th>Data Type</th><th>Storage Location</th><th>External Transmission</th></tr>
+<tr><td>Match scores &amp; history</td><td>Local (Room SQLite)</td><td>None</td></tr>
+<tr><td>Tournaments (teams, players, rankings)</td><td>Local (Room SQLite)</td><td>None</td></tr>
+<tr><td>Player profile (name, club, city)</td><td>Local (SharedPreferences)</td><td>None</td></tr>
+<tr><td>App settings (accessibility, voice, measurement mode)</td><td>Local (SharedPreferences)</td><td>None</td></tr>
+<tr><td>Photos captured for distance scanning</td><td>In-memory only (ephemeral)</td><td>None</td></tr>
+<tr><td>Video clips (Clip Mode)</td><td>App-private local storage</td><td>None (unless explicitly shared by you via Android Share Sheet)</td></tr>
+<tr><td>Voice commands</td><td>100% offline on-device processing (Vosk)</td><td>None</td></tr>
+</table>
+
+<h2>3. Permissions Used</h2>
+<table>
+<tr><th>Permission</th><th>Purpose</th></tr>
+<tr><td><code>CAMERA</code></td><td>Capture ground images for on-device OpenCV distance measurement and optional video clips</td></tr>
+<tr><td><code>RECORD_AUDIO</code></td><td>Hands-free voice commands processed 100% offline via Vosk</td></tr>
+<tr><td><code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_MICROPHONE</code></td><td>Keep offline voice recognition active during an ongoing match</td></tr>
+<tr><td><code>VIBRATE</code></td><td>Haptic feedback on score and measurement interactions</td></tr>
+<tr><td><code>POST_NOTIFICATIONS</code></td><td>Display active status notification while the voice assistant is listening</td></tr>
+</table>
+
+<h2>4. Offline Voice Recognition &amp; Computer Vision</h2>
+<p>Voice commands use <strong>Vosk</strong> (100% offline speech recognition) and distance measurements use on-device <strong>OpenCV</strong>. No audio or camera frame is ever uploaded to a remote server.</p>
+
+<h2>5. Contact</h2>
+<p>For any privacy questions: <a href="mailto:petanquescanner@gmail.com">petanquescanner@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="fr">
+<h1>🇫🇷 Politique de Confidentialité — Pétanque Scanner</h1>
+<p class="meta"><strong>Dernière mise à jour :</strong> Octobre 2026<br>
 <strong>Développeur :</strong> Vince427<br>
 <strong>Application :</strong> Pétanque Scanner (<code>com.petanquescanner.app</code>)</p>
 
@@ -39,61 +89,26 @@
 <tr><td>Profil joueur (nom, club, ville)</td><td>Local (SharedPreferences)</td><td>Aucune</td></tr>
 <tr><td>Paramètres (accessibilité, voix, mode de mesure)</td><td>Local (SharedPreferences)</td><td>Aucune</td></tr>
 <tr><td>Photos prises pour le scanner</td><td>Mémoire temporaire uniquement</td><td>Aucune</td></tr>
-<tr><td>Clips vidéo (Mode Clip)</td><td>Stockage privé de l'app</td><td>Aucune, sauf partage volontaire (voir §6)</td></tr>
-<tr><td>Commandes vocales</td><td>Traitement local (Vosk hors-ligne)</td><td>Aucune</td></tr>
+<tr><td>Clips vidéo (Mode Clip)</td><td>Stockage privé de l'app</td><td>Aucune, sauf partage volontaire via le sélecteur Android</td></tr>
+<tr><td>Commandes vocales</td><td>Traitement local (Vosk 100 % hors-ligne)</td><td>Aucune</td></tr>
 </table>
-<p>Aucun serveur distant n'est contacté pour faire fonctionner l'application.</p>
 
 <h2>3. Permissions utilisées</h2>
 <table>
 <tr><th>Permission</th><th>Raison</th></tr>
-<tr><td><code>CAMERA</code></td><td>Photographier le terrain pour le scanner, et filmer les clips</td></tr>
-<tr><td><code>RECORD_AUDIO</code></td><td>Commandes vocales (reconnaissance 100 % hors-ligne)</td></tr>
+<tr><td><code>CAMERA</code></td><td>Photographier le terrain pour le scanner OpenCV local et filmer les clips</td></tr>
+<tr><td><code>RECORD_AUDIO</code></td><td>Commandes vocales (reconnaissance 100 % hors-ligne via Vosk)</td></tr>
 <tr><td><code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_MICROPHONE</code></td><td>Maintenir l'écoute vocale active pendant une partie</td></tr>
 <tr><td><code>VIBRATE</code></td><td>Retour haptique sur les interactions</td></tr>
 <tr><td><code>POST_NOTIFICATIONS</code></td><td>Afficher la notification du service vocal en cours</td></tr>
 </table>
 
-<h2>4. Reconnaissance vocale</h2>
-<p>L'assistant vocal utilise <strong>Vosk</strong>, un moteur de reconnaissance vocale <strong>100 % hors-ligne</strong>.
-Aucun enregistrement audio n'est envoyé à un serveur externe ; le traitement se fait entièrement sur votre appareil.</p>
+<h2>4. Reconnaissance vocale &amp; Vision locale</h2>
+<p>L'assistant vocal utilise <strong>Vosk</strong> (100 % hors-ligne) et le scanner de litige utilise <strong>OpenCV</strong> directement sur l'appareil. Aucun enregistrement audio ni photo n'est envoyé à un serveur externe.</p>
 
-<h2>5. Caméra et photos (scanner)</h2>
-<p>Les photos prises via le scanner de litige sont utilisées <strong>uniquement pour l'analyse locale</strong>
-(OpenCV / détection sur l'appareil). Elles ne sont ni sauvegardées de façon permanente ni transmises à un serveur.</p>
-
-<h2>6. Clips vidéo (Mode Clip)</h2>
-<p>Les clips filmés via le Mode Clip sont enregistrés dans le <strong>stockage privé de l'application</strong> et
-traités <strong>localement</strong> (ralenti, watermark). Ils ne sont <strong>jamais</strong> envoyés automatiquement.
-Un clip ne quitte votre appareil que si <strong>vous</strong> choisissez explicitement de le partager via le
-sélecteur Android (TikTok, Instagram, WhatsApp, etc.) ; le partage est alors régi par la politique de
-confidentialité de l'application choisie.</p>
-
-<h2>7. Publicité et monétisation</h2>
-<p>À ce jour, l'application <strong>n'affiche aucune publicité</strong> et <strong>ne propose aucun achat</strong>.
-Aucun identifiant publicitaire n'est collecté.</p>
-<p>Les composants Google AdMob (publicité) et Google Play Billing (achats) sont présents mais <strong>désactivés</strong>.
-Si une version future les active :</p>
-<ul>
-<li><strong>AdMob</strong> pourra collecter un identifiant publicitaire conformément à sa propre politique :
-<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Vous pourrez désactiver la
-personnalisation via <strong>Paramètres Android → Google → Annonces</strong>.</li>
-<li><strong>Google Play Billing</strong> traitera les éventuels achats : aucune information de paiement ne transitera
-par l'application, tout étant géré par Google Play.</li>
-</ul>
-<p>Cette politique sera mise à jour en conséquence avant toute activation.</p>
-
-<h2>8. Enfants</h2>
-<p>Cette application n'est pas destinée aux enfants de moins de 13 ans et ne collecte pas sciemment de données
-les concernant.</p>
-
-<h2>9. Modifications</h2>
-<p>Toute modification de cette politique sera publiée sur cette page avec une nouvelle date de mise à jour.
-L'utilisation continue de l'application après modification vaut acceptation.</p>
-
-<h2>10. Contact</h2>
-<p>Pour toute question relative à la confidentialité :<br>
-<strong>Email :</strong> <a href="mailto:petanquescanner@gmail.com">petanquescanner@gmail.com</a></p>
+<h2>5. Contact</h2>
+<p>Pour toute question relative à la confidentialité : <a href="mailto:petanquescanner@gmail.com">petanquescanner@gmail.com</a></p>
+</section>
 
 </body>
 </html>
